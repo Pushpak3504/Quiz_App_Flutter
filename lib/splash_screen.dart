@@ -23,10 +23,14 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          OutlinedButton(
+          OutlinedButton.icon(
             onPressed: () {},
-            style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
-            child: const Text('Start Quiz'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: const Color.fromARGB(255, 54, 54, 54),
+            ),
+            icon: const Icon(Icons.arrow_forward_ios),
+            label: const Text('Start Quiz'),
           ),
         ],
       ),
