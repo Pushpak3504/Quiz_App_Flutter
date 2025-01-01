@@ -11,19 +11,30 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(159, 21, 57, 176),
-              Color.fromARGB(199, 5, 134, 255)
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          )),
-        ),
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text("The question"),
+          const SizedBox(height: 30),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Answer 1"),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Answer 2"),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Answer 3"),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Answer 4"),
+          ),
+        ],
       ),
     );
   }
