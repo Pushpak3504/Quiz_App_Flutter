@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:quiz/data/questions.dart';
 import 'package:quiz/questions_screen.dart';
 import 'package:quiz/splash_screen.dart';
 
@@ -13,7 +14,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  final List<String> selectedAnswers = [];
+  List<String> selectedAnswers = [];
   var activeScreen = 'splash-screen';
 
   switchScreen() {
@@ -24,6 +25,12 @@ class _QuizState extends State<Quiz> {
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
+
+    if (selectedAnswers.length == questions.length) {
+      setState(() {
+        activeScreen = 'splash_screen';
+      });
+    }
   }
 
   @override
