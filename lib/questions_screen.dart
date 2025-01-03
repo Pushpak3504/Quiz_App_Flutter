@@ -4,7 +4,11 @@ import 'package:quiz/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key});
+  const QuestionsScreen({super.key, required this.onSelectAnswer,});
+
+  final void Function(String answer) onSelectAnswer;
+
+  
   @override
   State<StatefulWidget> createState() {
     return _QuestionsScreenState();
