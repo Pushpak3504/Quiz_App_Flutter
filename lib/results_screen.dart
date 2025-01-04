@@ -5,6 +5,15 @@ class ResultsScreen extends StatelessWidget {
 
   final List<String> chosenAnswer;
 
+  List<Map<String, Object>> getSummaryData() {
+    final List<Map<String, Object>> summary = [];
+
+    for (var i = 0; i < chosenAnswer.length; i++) {
+      
+    } 
+    return summary;
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
