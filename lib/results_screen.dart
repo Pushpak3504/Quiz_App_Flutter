@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz/data/questions.dart';
 import 'package:quiz/questions_summary.dart';
@@ -39,11 +38,13 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('You answered x out of y questions correctly!'),
+            Text(
+              'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
+            ),
             const SizedBox(
               height: 30,
             ),
-            QuestionsSummary(getSummaryData),
+            QuestionsSummary(summaryData),
             const SizedBox(
               height: 30,
             ),
